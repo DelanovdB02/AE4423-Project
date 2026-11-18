@@ -43,12 +43,12 @@ The following assumptions are made:
 -------------------
 
 The following steps are taken:
-- Calculate airport distances and feasibility
-- Generate ALL feasible rotations
-- Calculate revenue and costs per rotation
-- Formulate the mathematical model & Implement
-- Validate & calculate KPIs
-- Evaluate (e.g. scenario based all aircraft vs no electric aircraft)
+- 1. Calculate airport distances and feasibility
+- 2. Generate ALL feasible rotations
+- 3. Calculate revenue and costs per rotation
+- 4. Formulate the mathematical model & Implement
+- 5. Validate & calculate KPIs
+- 6. Evaluate (e.g. scenario based all aircraft vs no electric aircraft)
 
 """
 

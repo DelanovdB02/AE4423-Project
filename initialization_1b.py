@@ -26,12 +26,12 @@ The following assumptions are made:
 -------------------
 
 The following steps are taken:
-- Generate recapture possibilites
-- Define mathematical model (leg-based)
-- Calculate revenues and spill costs
-- Implement the RMP
-- Implement column generation using reduce costs
-- Solve, validate & calculate KPI's
-- Evaluate & report
+- 1. Generate recapture possibilites
+- 2. Define mathematical model (leg-based)
+- 3. Calculate revenues and spill costs
+- 4. Implement the RMP
+- 5. Implement column generation using reduce costs
+- 6. Solve, validate & calculate KPI's
+- 7. Evaluate & report
 
 """
