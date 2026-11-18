@@ -1,4 +1,3 @@
-
 from gurobipy import *
 
 # Data

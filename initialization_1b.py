@@ -1,0 +1,37 @@
+""""
+Passenger Mix Flow
+
+The airline has a daily flight schedule (as created in 1a, data retreived) for which we want to study the best passenger mix flow to maximize revenue.
+
+-------------------
+
+The goal of the second assignment is to identify the best mix of passengers from each itinerary to carry on each flight leg.
+The problem is optimized for a single days of operations and considers spill costs and recapture opportunities.
+Capacity constraints per flight leg and limited unconstrained demand per itinerary needs to be verified.
+
+------------------ 
+
+The following data is used:
+- 1b_Group_4.xlsx
+   with an airline daily flight schedule, passenger itineraries and flight pairs
+
+-------------------
+
+The following assumptions are made:
+- 10% of the pax will refuse rescheduling
+- extra 10% will refuse reschedule IF t_dep moves 1-3 hours
+- extra 20% will refuse reschedule IF t_dep moves < 3 hours
+- extra 30% will refuse reschedule IF t_flight increases by > 2 hours
+
+-------------------
+
+The following steps are taken:
+- Generate recapture possibilites
+- Define mathematical model (leg-based)
+- Calculate revenues and spill costs
+- Implement the RMP
+- Implement column generation using reduce costs
+- Solve, validate & calculate KPI's
+- Evaluate & report
+
+"""
