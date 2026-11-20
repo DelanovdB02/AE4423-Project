@@ -34,3 +34,37 @@ The following steps are taken:
 - 6. Solve, validate & calculate KPI's
 - 7. Evaluate & report
 """
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+flights = pd.read_excel('data/1b_Group_4.xlsx', sheet_name = 0)
+itin = pd.read_excel('data/1b_Group_4.xlsx', sheet_name = 1)
+
+flights['Arrival_dt'] = pd.to_datetime(flights['Arrival'], format='mixed')
+flights['Departure_dt'] = pd.to_datetime(flights['Departure'], format='mixed')
+
+flights['Arrival_hour'] = flights['Arrival_dt'].dt.hour + flights['Arrival_dt'].dt.minute / 60
+flights['Departure_hour'] = flights['Departure_dt'].dt.hour + flights['Departure_dt'].dt.minute / 60
+
+flights = flights.sort_values('Departure_hour').reset_index(drop=True)
+
+fig, ax = plt.subplots(figsize=(16, 8))
+
+for i, row in flights.iterrows():
+    ax.barh(
+        y=i,
+        width=row['Departure_hour'] - row['Arrival_hour'],
+        left=row['Arrival_hour'],
+        height=2
+    )
+start = int(max(0,flights['Departure_hour'].min()-1))
+
+ax.set_xlim(start, 24)
+ax.set_xticks(range(start,25))
+ax.set_xticklabels(f'{h:02d}:00' for h in range(start, 25))
+ax.set_xlabel('Time of day')
+ax.set_title('Flight Schedule per Day')
+ax.yaxis.set_visible(False)
+plt.tight_layout()
+plt.show()
