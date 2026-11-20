@@ -33,5 +33,4 @@ The following steps are taken:
 - 5. Implement column generation using reduce costs
 - 6. Solve, validate & calculate KPI's
 - 7. Evaluate & report
-
 """

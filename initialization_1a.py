@@ -50,6 +50,26 @@ The following steps are taken:
 - 5. Validate & calculate KPIs
 - 6. Evaluate (e.g. scenario based all aircraft vs no electric aircraft)
 
+------
+
+
+Example: in this triangle route, could a passenger enter at j and exit at n?
+
+
+triangle route
+
+
+
+The answer is yes. So, consider that within your route (r), you could have different i and js. Note: this is still direct passengers, as there is no change of aircraft!
+
+In turn, transfers passengers have a change of aircraft! These are passengers that enter in route r and change to route r' through the hub.
+
+In summary, this notation does not change what the transfer of passenger represents. However, it does introduce the fact that:
+- You can have different direct passengers within a route, depending on where they enter and leave (different i and/or j)
+-  You can have different transfers passenger that move from route r to route r' through the hub, depending on where they enter and leave (different i and/or j)
+
+Finally, this will make for an interesting capacity constraint, as you have different legs of route r where passengers may come in and out.
+
 """
 
 import pandas as pd
