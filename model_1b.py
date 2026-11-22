@@ -183,3 +183,6 @@ print(f"Total passengers travelling: {total_travelled:.2f}")
 
 print(f"Share of demand travelling: {total_travelled / total_demand:.2%}")
 print(f"Share of demand lost: {total_lost / total_demand:.2%}")
+
+
+# Time-based demand integration -> advice to focus on certain flight or aircraft types in an itereative/future process
