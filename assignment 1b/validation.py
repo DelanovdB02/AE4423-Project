@@ -78,7 +78,7 @@ def sensitivity_analysis(math_model):
 
                 print("\nKPI RESULTS")
                 print("-" * 30)
-                print(f"Lost demand:    {KPI['lost_share']:.1%}")
+                print(f"Lost share:    {KPI['lost_share']:.1%}")
                 print(f"Lost revenue:   €{KPI['lost_revenue']:,.2f}")
                 print(f"Recapture rate: {KPI['recapture_rate']:.1%}")
                 print(f"Load factor:    {KPI['load_factor']:.1%}")

@@ -108,6 +108,10 @@ def math_model(verbose=True):
 
 math_model()
 
+# ------------------- #
+# 5. Model validation
+# ------------------- #
+
 run_sensitivity = False
 if run_sensitivity:
     sensitivity_results = sensitivity_analysis(math_model)

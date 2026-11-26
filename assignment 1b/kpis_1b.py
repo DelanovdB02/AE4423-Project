@@ -68,9 +68,14 @@ def compute_kpis(model, t):
 
     return KPI
 
-
-###### DUAL VARIABLES ####
-
+####################################################################################
+###### DUAL VARIABLES (only for column generation algo) ####
+# Indicate the final objective value, the total number of passengers spilled, the optimal
+# decision variables associated with the first 5 passengers itineraries and the optimal dual
+# variables for the first 5 flights of the schedule. Provide also information regarding the
+# number of columns in the RMP before and after running the column generation algorithm,
+# and the number of iterations required to converge.
+###############################################################################
 
 # Automated above KPIs to be printed with code using chatgpt command:
 def kpis(KPI):
@@ -98,4 +103,4 @@ def kpis(KPI):
     print(f"Potential revenue:  €{KPI['potential_revenue']:,.2f}")
     print(f"Lost revenue:       €{KPI['lost_revenue']:,.2f} (MINIMIZED)")
     print(f"Retained revenue:   €{KPI['retained_revenue']:,.2f}")
-    print(f"Revenue recovered:  €{KPI['revenue_recovered']:,.2f}")
+    print(f"Revenue recovered by recapturing:  €{KPI['revenue_recovered']:,.2f}")
