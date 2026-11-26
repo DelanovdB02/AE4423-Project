@@ -64,7 +64,7 @@ itin = itin.rename(columns={"Itinerary": "itinerary_id",
 
 # -- Creating sets --
 L = flights["flight_id"].astype(str).str.strip().tolist()
-P = itin["itinerary_id"].tolist()
+P = itin["itinerary_id"].astype(int).tolist()
 
 # -- Creating parameters --
 # Capacity per flight
