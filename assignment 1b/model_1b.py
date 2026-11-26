@@ -80,15 +80,8 @@ def math_model(verbose=True):
         model.addConstr(
             gp.quicksum(t[p, r] for r in P_alt[p])
                         <= D[p],
-                        name =f"Demand_{p}"
-        )
-
-        # C3: Number of pax is positive
-    for p in P:
-        for r in P_alt[p]:
-            t[p, r] >= 0
-
-
+                        name =f"Demand_{p}")
+        
     # Solve model
     model.Params.OutputFlag = int(verbose)
     model.optimize()
